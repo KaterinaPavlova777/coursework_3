@@ -38,9 +38,3 @@ class Vacancy:
 
     def __le__(self, other: Any) -> Any:
         return self.__salary <= other.__salary
-
-    def __gt__(self, other: Any) -> Any:
-        return self.__salary > other.__salary
-
-    def __ge__(self, other: Any) -> Any:
-        return self.__salary >= other.__salary
