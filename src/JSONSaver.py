@@ -1,7 +1,22 @@
 import json
+from abc import ABC, abstractmethod
 from typing import Any
 
 from src.vacancy import Vacancy
+
+
+class Worker(ABC):
+    """
+    Абстрактный родительский класс для чтения и записи файла
+    """
+
+    @abstractmethod
+    def add_vacancy(self, vacancy: Any) -> None:
+        pass
+
+    @abstractmethod
+    def remove_vacancy(self, vacancy: Any) -> None:
+        pass
 
 
 class JSONSaver:
